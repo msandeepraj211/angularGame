@@ -1,0 +1,13 @@
+<div class="game">
+    <div ng-class="{disabled:!playing}">
+        <div ng-repeat="row in [].constructor(options.columns*options.rows) track by $index" class="cell" style="{{cellStyle}}">
+            <div ng-class="{target:(targets.indexOf($index)!==-1)}" mobile-click="targetClicked($index)" class="cell-content">
+            	<div class="blast"></div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons" ng-show="!playing">
+        <button class="btn btn-primary" mobile-click="newGame()">Restart Level</button>
+        <button class="btn btn-warning" mobile-click="newLife()" ng-show="options.livesRemaining && targets.length">Use Life( {{options.livesRemaining}} remaining)</button>
+    </div>
+</div>

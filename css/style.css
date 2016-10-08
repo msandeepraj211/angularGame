@@ -1,0 +1,120 @@
+.game {
+  margin: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+  position: relative;
+}
+.game .cell {
+  float: left;
+  height: 100%;
+}
+.game .cell .cell-content {
+  background-image: url('/pics/normal.png');
+  cursor: url("/pics/pointer.png"), auto;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 96%;
+  width: 96%;
+  margin: 2%;
+}
+.game .cell .cell-content .blast {
+  background-image: url('/pics/blast2.gif');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+.game .cell .cell-content:active {
+  cursor: url("/pics/pointerClick.png"), auto;
+}
+.game .cell .cell-content.target {
+  background-image: url('/pics/target.gif');
+}
+.game .cell .cell-content.target .blast {
+  opacity: 0;
+}
+.game .cell .cell-content.target .blast:active {
+  opacity: 1;
+  -webkit-transition: all 0.001s ease-in;
+  -moz-transition: all 0.001s ease-in;
+  -o-transition: all 0.001s ease-in;
+  transition: all 0.001s ease-in;
+}
+.game:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.game .disabled {
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+.game .buttons {
+  pointer-events: all;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  -webkit-filter: none;
+  filter: none;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+settings {
+  position: fixed;
+  top: 10%;
+  right: 0;
+}
+settings .settings {
+  float: right;
+  background: #9dddf1;
+  border-radius: 0 0 0 5px;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  position: relative;
+  width: 0;
+}
+settings .settings:hover {
+  width: 200px;
+  padding: 10px;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+settings .settings .title {
+  background: #82bcce;
+  text-align: center;
+}
+settings .settingsBtn {
+  float: left;
+  background: #9dddf1;
+  border-radius: 3px 0 0 3px;
+  padding: 5px;
+}
+settings .settingsBtn:hover ~ .settings {
+  width: 200px;
+  padding: 10px;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+.no-padding {
+  padding: 0!important;
+}

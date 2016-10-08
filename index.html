@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body ng-app="game" ng-controller="game">
+	
+<game options="options"></game>
+<settings>
+	<settings-title>Settings</settings-title>
+	<settings-body>
+		<div class="col-xs-6">Rows</div>
+		<div class="col-xs-6"><input type="number" class="col-xs-12 no-padding" ng-model="options.rows"></div>
+		<div class="col-xs-6">Columns</div>
+		<div class="col-xs-6"><input type="number" class="col-xs-12 no-padding" ng-model="options.columns"></div>
+		<div class="col-xs-6">Level</div>
+		<div class="col-xs-6"><input type="number" class="col-xs-12 no-padding" ng-model="options.level"></div>
+		<div class="col-xs-6">Time(s)</div>
+		<div class="col-xs-6"><input type="number" class="col-xs-12 no-padding" ng-model="options.time"></div>
+		<div class="col-xs-6">Lives</div>
+		<div class="col-xs-6"><input type="number" class="col-xs-12 no-padding" ng-model="options.lives"></div>
+	</settings-body>
+</settings>
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>

@@ -1,0 +1,1 @@
+to start the server cd to the folder and run "python -m SimpleHTTPServer" and open the site in "http://localhost:8000"
