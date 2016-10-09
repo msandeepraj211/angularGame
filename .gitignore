@@ -1,1 +1,22 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea
+Thumbs.db
+npm-debug.log
+node_modules
+bower_components
+.sass-cache
+
+## Ignore Mac OS Stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Ignore Sublime text stuff
+
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
