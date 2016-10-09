@@ -7,7 +7,10 @@
         </div>
     </div>
     <div class="buttons" ng-show="!playing">
-        <button class="btn btn-primary" mobile-click="newGame()">Restart Level</button>
-        <button class="btn btn-warning" mobile-click="newLife()" ng-show="options.livesRemaining && targets.length">Use Life( {{options.livesRemaining}} remaining)</button>
+        <button class="btn btn-primary" mobile-click="newGame()" ng-show="!options.livesRemaining">Restart Game</button>
+        <div class="text-alert" ng-show="options.livesRemaining && targets.length">
+	        <span ng-show="(options.livesRemaining>1) && targets.length">Using your next life...<br>({{options.livesRemaining}} remaining)</span>
+	        <span ng-show="(options.livesRemaining==1) && targets.length">Using your last life...</span>
+        </div>
     </div>
 </div>
